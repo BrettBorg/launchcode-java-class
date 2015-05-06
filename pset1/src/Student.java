@@ -16,6 +16,7 @@ public class Student {
         this.gpa = gpa;
     }
 
+
     // Getters and Setters - some of them are not really needed
     public String getName() { return this.name; }
 

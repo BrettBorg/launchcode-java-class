@@ -29,6 +29,7 @@ public class StudentAndCourseTest extends TestCase {
 			assertEquals(0, s3.getCredits());
 		}
 	}
+
 	public static void main(String args[]) {
 		//create a course and student
 		Course c = new Course("Java", 1, 20);
