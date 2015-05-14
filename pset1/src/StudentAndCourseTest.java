@@ -97,6 +97,11 @@ public class StudentAndCourseTest extends TestCase {
 		// compute the average GPA for all students
 		System.out.println(c.averageGPA());
 
+		// test the exception
+		Student e = new Student("Nitty Gritty", 1, 0, 4);
+		System.out.println(c.addStudent(e));
+		System.out.println(e.getClassStanding());
+
 	}
 
     //More tests should go here

@@ -16,7 +16,6 @@ public class Course {
         this.roster = new Student[seats];
     }
 
-
     // Getters and Setters - some of them are not really needed
     public String getName() {
         return this.name;

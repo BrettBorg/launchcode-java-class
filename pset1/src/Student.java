@@ -49,19 +49,25 @@ public class Student {
 
     // getClassStanding method - returns students class based on credit hours
     public String getClassStanding() {
-        String ClassStanding = "Freshman";
+        String ClassStanding;
 
-        if (credits > 29 && credits < 60) {
-                ClassStanding = "Sophomore";
+        if (credits > 0) {
+            ClassStanding = "Freshman";
         } else {
-              if (credits > 59 && credits < 90) {
-                 ClassStanding = "Junior";
-              } else {
+            if (credits > 29 && credits < 60) {
+                    ClassStanding = "Sophomore";
+            } else {
+                if (credits > 59 && credits < 90) {
+                    ClassStanding = "Junior";
+                } else {
                     if (credits > 89) {
                         ClassStanding = "Senior";
+                    } else {
+                        throw (new IllegalArgumentException("Student should have more than zero credits"));
                     }
                 }
-          }
+            }
+        }
           return ClassStanding;
     }
 
