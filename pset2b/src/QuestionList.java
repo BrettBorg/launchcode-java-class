@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.lang.Exception;
 
 /**
  * Created by Brett on 5/8/2015.
@@ -23,7 +24,7 @@ public class QuestionList
     }
 
     // method that will give the questions, ask for answer and check the answer until no more questions
-    public void giveQuestions()
+    public void giveQuestions() throws Exception
     {
         Scanner in = new Scanner(System.in);
 
@@ -32,6 +33,9 @@ public class QuestionList
             q.display();
             System.out.println("Your answer: ");
             String userAnswer = in.nextLine();
+            if (userAnswer.isEmpty()) {
+                throw new Exception("Please type an answer!! - Start Over.");
+            }
             System.out.println(q.checkAnswer(userAnswer));
         }
     }

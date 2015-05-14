@@ -3,7 +3,7 @@
  */
 public class Quiz
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
         // build all the questions and answers
         QuestionFITB first = new QuestionFITB();
